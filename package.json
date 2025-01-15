@@ -1,0 +1,21 @@
+{
+	"name": "earnx-server",
+	"version": "1.0.0",
+	"description": "This is a json server for EarnX apps.",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "json-server --watch db.json --port 3000"
+	},
+	"keywords": [
+		"EarnX",
+		"Earning",
+		"App",
+		"Mahir"
+	],
+	"dependencies": {
+		"json-server": "^0.17.0"
+	},
+	"author": "Md Mahir",
+	"license": "MIT"
+}
