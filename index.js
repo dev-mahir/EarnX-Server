@@ -1,0 +1,15 @@
+const express = require('express');
+const app = express();
+
+// Middleware (Optional)
+app.get('/', (req, res) => {
+  res.send('Hello, World!');
+});
+
+// Use PORT environment variable or default to 3000
+const PORT = process.env.PORT || 3000;
+
+// Bind to 0.0.0.0 to make it externally accessible
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Server is running on http://0.0.0.0:${PORT}`);
+});
