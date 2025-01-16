@@ -1,6 +1,24 @@
 const express = require('express');
 const app = express();
 
+
+
+// Middleware
+app.use(express.json());
+
+// Get data from db.json
+app.get('/word', (req, res) => {
+  fs.readFile('db.json', 'utf-8', (err, data) => {
+    if (err) {
+      return res.status(500).send('Error reading db.json');
+    }
+    const db = JSON.parse(data);
+    res.json(db.word);
+  });
+});
+
+
+
 // Middleware (Optional)
 app.get('/', (req, res) => {
   res.send('Hello, World!');
